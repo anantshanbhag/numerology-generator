@@ -8,9 +8,13 @@ import NameForm from "./NameForm";
 function App() {
   return (
     <>
-      <Header />
+      <div style={{ height: "4vh" }}>
+        <Header />
+      </div>
       <NameForm />
-      <Copyright />
+      <div style={{ height: "4vh" }}>
+        <Copyright />
+      </div>
     </>
   );
 }

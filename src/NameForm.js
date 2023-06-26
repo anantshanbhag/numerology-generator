@@ -36,7 +36,7 @@ function NameForm() {
 
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: 1, border: "1px solid black" }}>
+      <div style={{ flex: 1, border: "1px solid black", paddingLeft: "5px" }}>
         <label>Enter Name: </label>
         <input type="text" value={name} onChange={handleNameChange} />
         <br />
@@ -58,7 +58,7 @@ function NameForm() {
         style={{
           flex: 1,
           border: "1px solid black",
-          height: "100vh",
+          height: "86vh",
           overflowY: "auto",
         }}
       >
