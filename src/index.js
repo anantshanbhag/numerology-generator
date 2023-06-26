@@ -1,11 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import Header from "./components/header";
+import Copyright from "./components/copyright";
 
 import NameForm from "./NameForm";
 
 function App() {
-  return <NameForm />;
+  return (
+    <>
+      <Header />
+      <NameForm />
+      <Copyright />
+    </>
+  );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);

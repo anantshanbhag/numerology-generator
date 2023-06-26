@@ -5,7 +5,7 @@ import { nameLetterMap, luckyNumbersMap } from "./constants";
 import {
   calculateDigitTotal,
   convertNameToDigits,
-  getLuckyNumbers
+  getLuckyNumbers,
 } from "./utils";
 
 function NameForm() {
@@ -31,13 +31,8 @@ function NameForm() {
     return { nameToDigits, totalOfDigits, bn, dn, luckyNumbers };
   };
 
-  const {
-    nameToDigits,
-    totalOfDigits,
-    bn,
-    dn,
-    luckyNumbers
-  } = calculateLuckyNumbers();
+  const { nameToDigits, totalOfDigits, bn, dn, luckyNumbers } =
+    calculateLuckyNumbers();
 
   return (
     <div style={{ display: "flex" }}>
@@ -59,7 +54,14 @@ function NameForm() {
         <br />
         <label>Lucky Numbers: {luckyNumbers.join(", ")}</label>
       </div>
-      <div style={{ flex: 1, border: "1px solid black" }}>
+      <div
+        style={{
+          flex: 1,
+          border: "1px solid black",
+          height: "100vh",
+          overflowY: "auto",
+        }}
+      >
         <DigitLettersView nameLetterMap={nameLetterMap} />
         <br />
         <LuckyNumbersView luckyNumbersMap={luckyNumbersMap} />
