@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Header from "./components/header";
 import Copyright from "./components/copyright";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import NameForm from "./NameForm";
 
@@ -23,3 +24,5 @@ root.render(
     <App />
   </StrictMode>
 );
+
+serviceWorkerRegistration.register();
