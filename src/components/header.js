@@ -1,8 +1,12 @@
 function Header() {
   return (
     <header>
-      <div style={{ height: "5vh", paddingBottom: "13px" }}>
-        <h1>Numerology Generator</h1>
+      <div>
+        <h1
+          style={{ height: "5vh", marginTop: "2.5vh", marginBottom: "2.5vh" }}
+        >
+          Numerology Generator
+        </h1>
       </div>
     </header>
   );
