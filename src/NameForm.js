@@ -35,7 +35,7 @@ function NameForm() {
     calculateLuckyNumbers();
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", height: "80vh" }}>
       <div style={{ flex: 1, border: "1px solid black", paddingLeft: "5px" }}>
         <label>Enter Name: </label>
         <input type="text" value={name} onChange={handleNameChange} />
@@ -56,9 +56,7 @@ function NameForm() {
       </div>
       <div
         style={{
-          flex: 1,
           border: "1px solid black",
-          height: "86vh",
           overflowY: "auto",
         }}
       >
