@@ -1,21 +1,20 @@
 import React from "react";
+import { tableStyles } from "../utils";
 
 const DigitLettersView = ({ nameLetterMap }) => (
   <table>
     <thead>
       <tr>
-        <th>Digit</th>
-        <th>Letters</th>
+        <th style={tableStyles}>Digit</th>
+        <th style={tableStyles}>Letters</th>
       </tr>
     </thead>
     <tbody>
       {Object.keys(nameLetterMap).map((digit) => (
         <tr key={digit}>
-          <td>{digit}</td>
+          <td style={tableStyles}>{digit}</td>
           <td>
-            <tt>
-              <big>{nameLetterMap[digit].join(", ")}</big>
-            </tt>
+            <tt style={tableStyles}>{nameLetterMap[digit].join(", ")}</tt>
           </td>
         </tr>
       ))}

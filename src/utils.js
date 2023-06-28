@@ -105,3 +105,23 @@ export function getLuckyNumbers(bn, dn) {
   // If no matching row is found, return an empty array
   return [];
 }
+
+export const tableStyles = {
+  fontFamily: "Raleway, sans-serif",
+  fontWeight: 300,
+  color: "#080808",
+};
+
+export const labelStyles = {
+  marginBottom: "5px",
+  fontSize: "16px",
+  fontWeight: 300,
+};
+
+export const inputStyles = {
+marginBottom: "5px",
+            padding: "5px",
+            fontSize: "14px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+};

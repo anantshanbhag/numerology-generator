@@ -4,11 +4,16 @@ function Header() {
       <div>
         <h1
           style={{
-            height: "5vh",
-            margin: "2.5vh 0",
-            fontSize: "28px",
-            fontWeight: "bold",
-            letterSpacing: "2px",
+            marginTop: "2.5vh",
+            marginBottom: "2.5vh",
+            padding: 0,
+            fontFamily: "Raleway, sans-serif",
+            fontWeight: 300,
+            color: "#080808",
+            textAlign: "center",
+            textTransform: "uppercase",
+            fontSize: "26px",
+            letterSpacing: "1px",
           }}
         >
           Numerology Generator

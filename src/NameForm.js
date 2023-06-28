@@ -6,6 +6,8 @@ import {
   calculateDigitTotal,
   convertNameToDigits,
   getLuckyNumbers,
+  labelStyles,
+  inputStyles,
 } from "./utils";
 
 function NameForm() {
@@ -42,7 +44,8 @@ function NameForm() {
         border: "1px solid #ccc",
         borderRadius: "5px",
         overflow: "hidden",
-        fontFamily: "Roboto, sans-serif",
+        fontFamily: "Raleway, sans-serif",
+        color: "#080808",
       }}
     >
       <div
@@ -56,76 +59,31 @@ function NameForm() {
           alignItems: "flex-start",
         }}
       >
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          Enter Name:
-        </label>
+        <label style={labelStyles}>Enter Name:</label>
         <input
           type="text"
           value={name}
           onChange={handleNameChange}
-          placeholder={"name"}
-          style={{
-            marginBottom: "5px",
-            padding: "5px",
-            fontSize: "14px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
+          placeholder={"Hritvik"}
+          style={inputStyles}
         />
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          Digits: {nameToDigits}
-        </label>
-        <label
-          style={{ marginBottom: "10px", fontSize: "16px", fontWeight: "bold" }}
-        >
+        <label style={labelStyles}>Digits: {nameToDigits}</label>
+        <label style={{ ...labelStyles, marginBottom: "10px" }}>
           Total: {totalOfDigits > 0 && totalOfDigits}
         </label>
-        <label
-          style={{
-            marginTop: "20px",
-            marginBottom: "5px",
-            fontSize: "16px",
-            fontWeight: "bold",
-          }}
-        >
+        <label style={{ ...labelStyles, marginTop: "20px" }}>
           Select birthdate:
         </label>
         <input
           type="date"
           value={date}
           onChange={handleDateChange}
-          style={{
-            marginBottom: "5px",
-            padding: "5px",
-            fontSize: "14px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
+          style={inputStyles}
         />
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          Birth Number: {bn > 0 && bn}
-        </label>
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          Destiny Number: {dn > 0 && dn}
-        </label>
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          Lucky Numbers:
-        </label>
-        <label
-          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
-        >
-          {luckyNumbers.join(", ")}
-        </label>
+        <label style={labelStyles}>Birth Number: {bn > 0 && bn}</label>
+        <label style={labelStyles}>Destiny Number: {dn > 0 && dn}</label>
+        <label style={labelStyles}>Lucky Numbers:</label>
+        <label style={labelStyles}>{luckyNumbers.join(", ")}</label>
       </div>
       <div
         style={{
