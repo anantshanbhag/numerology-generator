@@ -66,9 +66,14 @@ function NameForm() {
           placeholder={"Hritvik"}
           style={inputStyles}
         />
-        <label style={labelStyles}>Digits: {nameToDigits}</label>
+        <label style={labelStyles}>
+          Digits: <span style={{ fontWeight: 500 }}>{nameToDigits}</span>
+        </label>
         <label style={{ ...labelStyles, marginBottom: "10px" }}>
-          Total: {totalOfDigits > 0 && totalOfDigits}
+          Total:{" "}
+          <span style={{ fontWeight: 500 }}>
+            {totalOfDigits > 0 && totalOfDigits}
+          </span>
         </label>
         <label style={{ ...labelStyles, marginTop: "20px" }}>
           Select birthdate:
@@ -79,10 +84,17 @@ function NameForm() {
           onChange={handleDateChange}
           style={inputStyles}
         />
-        <label style={labelStyles}>Birth Number: {bn > 0 && bn}</label>
-        <label style={labelStyles}>Destiny Number: {dn > 0 && dn}</label>
+        <label style={labelStyles}>
+          Birth Number: <span style={{ fontWeight: 500 }}>{bn > 0 && bn}</span>
+        </label>
+        <label style={labelStyles}>
+          Destiny Number:{" "}
+          <span style={{ fontWeight: 500 }}>{dn > 0 && dn}</span>
+        </label>
         <label style={labelStyles}>Lucky Numbers:</label>
-        <label style={labelStyles}>{luckyNumbers.join(", ")}</label>
+        <label style={{ ...labelStyles, fontWeight: 500 }}>
+          {luckyNumbers.join(", ")}
+        </label>
       </div>
       <div
         style={{
