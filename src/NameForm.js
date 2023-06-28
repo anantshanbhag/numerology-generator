@@ -35,12 +35,21 @@ function NameForm() {
     calculateLuckyNumbers();
 
   return (
-    <div style={{ display: "flex", height: "80vh" }}>
+    <div
+      style={{
+        display: "flex",
+        height: "80vh",
+        border: "1px solid #ccc",
+        borderRadius: "5px",
+        overflow: "hidden",
+        fontFamily: "Roboto, sans-serif",
+      }}
+    >
       <div
         style={{
           flex: 1,
-          border: "1px solid black",
-          padding: "5px",
+          borderRight: "1px solid #ccc",
+          padding: "10px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
@@ -110,14 +119,18 @@ function NameForm() {
         <label
           style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
         >
-          Lucky Numbers: {luckyNumbers.join(", ")}
+          Lucky Numbers:
+        </label>
+        <label
+          style={{ marginBottom: "5px", fontSize: "16px", fontWeight: "bold" }}
+        >
+          {luckyNumbers.join(", ")}
         </label>
       </div>
       <div
         style={{
-          border: "1px solid black",
-          overflowY: "auto",
           padding: "10px",
+          overflowY: "auto",
         }}
       >
         <DigitLettersView nameLetterMap={nameLetterMap} />
