@@ -1,9 +1,15 @@
 function Header() {
   return (
-    <header>
+    <header style={{ textAlign: "center" }}>
       <div>
         <h1
-          style={{ height: "5vh", marginTop: "2.5vh", marginBottom: "2.5vh" }}
+          style={{
+            height: "5vh",
+            margin: "2.5vh 0",
+            fontSize: "28px",
+            fontWeight: "bold",
+            letterSpacing: "2px",
+          }}
         >
           Numerology Generator
         </h1>
