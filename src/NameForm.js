@@ -45,7 +45,6 @@ function NameForm() {
         borderRadius: "5px",
         overflow: "hidden",
         fontFamily: "Raleway, sans-serif",
-        color: "#080808",
       }}
     >
       <div

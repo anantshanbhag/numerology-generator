@@ -9,7 +9,6 @@ function Header() {
             padding: 0,
             fontFamily: "Raleway, sans-serif",
             fontWeight: 300,
-            color: "#080808",
             textAlign: "center",
             textTransform: "uppercase",
             fontSize: "26px",
