@@ -1,7 +1,7 @@
 {
   "name": "numerology",
   "version": "1.0.0",
-  "description": "https://reactjs.org/docs/hooks-reference.html#functional-updates",
+  "description": "Numerology Generator",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -11,6 +11,7 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/runtime": "7.13.8",
     "typescript": "4.1.3"
   },

@@ -109,7 +109,6 @@ export function getLuckyNumbers(bn, dn) {
 export const tableStyles = {
   fontFamily: "Raleway, sans-serif",
   fontWeight: 300,
-  color: "#080808",
 };
 
 export const labelStyles = {
@@ -119,9 +118,9 @@ export const labelStyles = {
 };
 
 export const inputStyles = {
-marginBottom: "5px",
-            padding: "5px",
-            fontSize: "14px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
+  marginBottom: "5px",
+  padding: "5px",
+  fontSize: "14px",
+  borderRadius: "5px",
+  border: "1px solid #ccc",
 };
