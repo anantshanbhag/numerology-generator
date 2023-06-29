@@ -1,25 +1,23 @@
 import React from "react";
-import { tableStyles } from "../utils";
+import { tableStyle } from "../utils";
 
-const LuckyNumbersView = ({ luckyNumbersMap }) => (
+export const LuckyNumbersView = ({ luckyNumbersMap }) => (
   <table>
     <thead>
       <tr>
-        <th style={tableStyles}>BN</th>
-        <th style={tableStyles}>DN</th>
-        <th style={tableStyles}>Lucky Numbers</th>
+        <th style={tableStyle}>BN</th>
+        <th style={tableStyle}>DN</th>
+        <th style={tableStyle}>Lucky Numbers</th>
       </tr>
     </thead>
     <tbody>
       {luckyNumbersMap.map((data, index) => (
         <tr key={index}>
-          <td style={tableStyles}>{data.bn}</td>
-          <td style={tableStyles}>{data.dn}</td>
-          <td style={tableStyles}>{data.luckyNumbers}</td>
+          <td style={tableStyle}>{data.bn}</td>
+          <td style={tableStyle}>{data.dn}</td>
+          <td style={tableStyle}>{data.luckyNumbers}</td>
         </tr>
       ))}
     </tbody>
   </table>
 );
-
-export default LuckyNumbersView;

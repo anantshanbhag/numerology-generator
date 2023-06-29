@@ -6,7 +6,7 @@ export const nameLetterMap = {
   5: ["E", "H", "N", "X"],
   6: ["U", "V", "W"],
   7: ["O", "Z"],
-  8: ["F", "P"]
+  8: ["F", "P"],
 };
 
 export const luckyNumbersMap = [
@@ -90,5 +90,53 @@ export const luckyNumbersMap = [
   { bn: 9, dn: 6, luckyNumbers: "5,7" },
   { bn: 9, dn: 7, luckyNumbers: "1,5,7,9" },
   { bn: 9, dn: 8, luckyNumbers: "3,5" },
-  { bn: 9, dn: 9, luckyNumbers: "1,3,9,5,7" }
+  { bn: 9, dn: 9, luckyNumbers: "1,3,9,5,7" },
 ];
+
+export const numberTypeMap = {
+  1: {
+    luckyNumbers: "1,3,5",
+    neutralNumbers: "2,6,9,7",
+    unluckyNumbers: "4,8",
+  },
+  2: {
+    luckyNumbers: "2,7",
+    neutralNumbers: "1,3,4,5,6",
+    unluckyNumbers: "8,9",
+  },
+  3: {
+    luckyNumbers: "1,3,9",
+    neutralNumbers: "2,4,5,7",
+    unluckyNumbers: "6,8",
+  },
+  4: {
+    luckyNumbers: "5,6",
+    neutralNumbers: "3,4",
+    unluckyNumbers: "1,2,7,8,9",
+  },
+  5: {
+    luckyNumbers: "1,5,6",
+    neutralNumbers: "2,3,4,8",
+    unluckyNumbers: "7,9",
+  },
+  6: {
+    luckyNumbers: "5,6",
+    neutralNumbers: "2,4,7,8",
+    unluckyNumbers: "1.3.9",
+  },
+  7: {
+    luckyNumbers: "1,2,5",
+    neutralNumbers: "4,7,9",
+    unluckyNumbers: "3,6,8",
+  },
+  8: {
+    luckyNumbers: "5,6",
+    neutralNumbers: "3,4,8",
+    unluckyNumbers: "1,2,7,9",
+  },
+  9: {
+    luckyNumbers: "1,3,9",
+    neutralNumbers: "5,7",
+    unluckyNumbers: "2,4,8,6",
+  },
+};

@@ -106,18 +106,20 @@ export function getLuckyNumbers(bn, dn) {
   return [];
 }
 
-export const tableStyles = {
+export const tableStyle = {
   fontFamily: "Raleway, sans-serif",
   fontWeight: 300,
 };
 
-export const labelStyles = {
+export const labelStyle = {
   marginBottom: "5px",
   fontSize: "16px",
   fontWeight: 300,
 };
 
-export const inputStyles = {
+export const resultStyle = { fontWeight: 500, marginLeft: "2px" };
+
+export const inputStyle = {
   marginBottom: "5px",
   padding: "5px",
   fontSize: "14px",
