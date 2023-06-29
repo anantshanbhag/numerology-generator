@@ -1,25 +1,27 @@
 import React from "react";
-import { tableStyles } from "../utils";
+import { tableStyle } from "../utils";
 
-const DigitLettersView = ({ nameLetterMap }) => (
+const thStyle = { ...tableStyle, textAlign: "initial" };
+
+export const DigitLettersView = ({ nameLetterMap }) => (
   <table>
     <thead>
       <tr>
-        <th style={tableStyles}>Digit</th>
-        <th style={tableStyles}>Letters</th>
+        <th style={thStyle}>Digit</th>
+        <th style={{ ...thStyle, paddingLeft: "10px" }}>Letters</th>
       </tr>
     </thead>
     <tbody>
       {Object.keys(nameLetterMap).map((digit) => (
         <tr key={digit}>
-          <td style={tableStyles}>{digit}</td>
+          <td style={tableStyle}>{digit}</td>
           <td>
-            <tt style={tableStyles}>{nameLetterMap[digit].join(", ")}</tt>
+            <tt style={{ ...tableStyle, paddingLeft: "10px" }}>
+              {nameLetterMap[digit].join(", ")}
+            </tt>
           </td>
         </tr>
       ))}
     </tbody>
   </table>
 );
-
-export default DigitLettersView;
