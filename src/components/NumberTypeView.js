@@ -1,10 +1,11 @@
 import React from "react";
 import { tableStyle } from "../utils";
+import { numberTypeMap } from "../constants";
 
 const tdStyle = { ...tableStyle, paddingLeft: "15px" };
-const thStyle = { ...tdStyle, textAlign: "initial" };
+const thStyle = { ...tdStyle, textAlign: "initial", fontWeight: 350 };
 
-export const NumberTypeView = ({ numberTypeMap }) => (
+export const NumberTypeView = () => (
   <table style={{ width: "100%", borderCollapse: "collapse" }}>
     <thead>
       <tr>

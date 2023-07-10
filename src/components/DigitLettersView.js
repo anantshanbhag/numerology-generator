@@ -1,9 +1,10 @@
 import React from "react";
 import { tableStyle } from "../utils";
+import { nameLetterMap } from "../constants";
 
 const thStyle = { ...tableStyle, textAlign: "initial" };
 
-export const DigitLettersView = ({ nameLetterMap }) => (
+export const DigitLettersView = () => (
   <table>
     <thead>
       <tr>

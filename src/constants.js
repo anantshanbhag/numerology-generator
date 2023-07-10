@@ -140,3 +140,18 @@ export const numberTypeMap = {
     unluckyNumbers: "2,4,8,6",
   },
 };
+
+export const zodiacMap = [
+  { number: 9, zodiac: "Aeries", startDate: "21-Mar", endDate: "20-Apr" },
+  { number: 6, zodiac: "Taurus", startDate: "21-Apr", endDate: "20-May" },
+  { number: 5, zodiac: "Gemini", startDate: "21-May", endDate: "21-Jun" },
+  { number: 2, zodiac: "Cancer", startDate: "22-Jun", endDate: "22-Jul" },
+  { number: 1, zodiac: "Leo", startDate: "23-Jul", endDate: "23-Aug" },
+  { number: 5, zodiac: "Virgo", startDate: "24-Aug", endDate: "23-Sep" },
+  { number: 6, zodiac: "Libra", startDate: "24-Sep", endDate: "23-Oct" },
+  { number: 9, zodiac: "Scorpio", startDate: "24-Oct", endDate: "22-Nov" },
+  { number: 3, zodiac: "Sagittarius", startDate: "23-Nov", endDate: "21-Dec" },
+  { number: 8, zodiac: "Capricorn", startDate: "22-Dec", endDate: "20-Jan" },
+  { number: 8, zodiac: "Aquarius", startDate: "21-Jan", endDate: "18-Feb" },
+  { number: 3, zodiac: "Pisces", startDate: "19-Feb", endDate: "20-Mar" },
+];

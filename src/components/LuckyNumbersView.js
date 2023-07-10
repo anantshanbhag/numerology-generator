@@ -1,7 +1,8 @@
 import React from "react";
 import { tableStyle } from "../utils";
+import { luckyNumbersMap } from "../constants";
 
-export const LuckyNumbersView = ({ luckyNumbersMap }) => (
+export const LuckyNumbersView = () => (
   <table>
     <thead>
       <tr>

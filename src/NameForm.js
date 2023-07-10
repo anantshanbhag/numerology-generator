@@ -3,8 +3,8 @@ import {
   DigitLettersView,
   LuckyNumbersView,
   NumberTypeView,
+  ZodiacView,
 } from "./components";
-import { nameLetterMap, luckyNumbersMap, numberTypeMap } from "./constants";
 import {
   calculateDigitTotal,
   convertNameToDigits,
@@ -12,11 +12,13 @@ import {
   labelStyle,
   resultStyle,
   inputStyle,
+  getZodiacDetails,
 } from "./utils";
 
 function NameForm() {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
+  const [isZodiacChecked, setIsZodiacChecked] = useState(false);
 
   const fullNameArray = name.split(" ");
   const firstName = fullNameArray?.[0] || "";
@@ -33,6 +35,8 @@ function NameForm() {
     const luckyNumbers = getLuckyNumbers(bn, dn);
     return { bn, dn, luckyNumbers };
   })();
+
+  const { zodiac, number: zodiacNumber } = getZodiacDetails(date) || {};
 
   const handleDateChange = (event) => {
     setDate(event.target.value);
@@ -65,6 +69,7 @@ function NameForm() {
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "flex-start",
+            position: "relative",
           }}
         >
           <label style={labelStyle}>Enter Name:</label>
@@ -76,11 +81,11 @@ function NameForm() {
             style={inputStyle}
           />
           <label style={labelStyle}>
-            {lastName ? "First:" : "Digits:"}
+            First name:
             <span style={resultStyle}>{firstNameDigits}</span>
           </label>
           <label style={{ ...labelStyle, marginBottom: "10px" }}>
-            {lastName ? "First name total:" : "Total:"}
+            First name total:
             <span style={resultStyle}>
               {firstNameTotal > 0 && firstNameTotal}
             </span>
@@ -88,7 +93,7 @@ function NameForm() {
           {lastName && (
             <>
               <label style={labelStyle}>
-                Last:
+                Last name:
                 <span style={resultStyle}>{lastNameDigits}</span>
               </label>
               <label style={{ ...labelStyle, marginBottom: "10px" }}>
@@ -97,8 +102,8 @@ function NameForm() {
                   {lastNameTotal > 0 && lastNameTotal}
                 </span>
               </label>
-              <label style={labelStyle}>
-                Grand total:
+              <label style={{ ...labelStyle, fontWeight: 500 }}>
+                Total:
                 <span style={resultStyle}>{grandTotal}</span>
               </label>
             </>
@@ -123,11 +128,36 @@ function NameForm() {
           <label style={{ ...labelStyle, ...resultStyle }}>
             {luckyNumbers.join(", ")}
           </label>
+          <label style={labelStyle}>
+            Zodiac sign:
+            <span style={resultStyle}>{zodiac}</span>
+          </label>
+          <label style={labelStyle}>
+            Zodiac number:
+            <span style={resultStyle}>{zodiacNumber}</span>
+          </label>
+          <div style={{ position: "absolute", right: 0, bottom: 0 }}>
+            <span>zodiac</span>
+            <input
+              type="checkbox"
+              style={{
+                margin: "10px",
+                transform: "scale(1.5)",
+                backgroundColor: isZodiacChecked ? "#2196F3" : "#ccc",
+                borderRadius: "50%",
+                cursor: "pointer",
+              }}
+              value={isZodiacChecked}
+              onChange={(event) => {
+                setIsZodiacChecked(event.target.checked);
+              }}
+            />
+          </div>
         </div>
         <div style={{ padding: "10px", overflowY: "auto" }}>
-          <DigitLettersView nameLetterMap={nameLetterMap} />
+          <DigitLettersView />
           <br />
-          <LuckyNumbersView luckyNumbersMap={luckyNumbersMap} />
+          <LuckyNumbersView />
         </div>
       </div>
       <div
@@ -139,9 +169,10 @@ function NameForm() {
           borderTopLeftRadius: "0px",
           borderTopRightRadius: "0px",
           height: "24vh",
+          overflowY: "auto",
         }}
       >
-        <NumberTypeView numberTypeMap={numberTypeMap} />
+        {isZodiacChecked ? <ZodiacView /> : <NumberTypeView />}
       </div>
     </>
   );

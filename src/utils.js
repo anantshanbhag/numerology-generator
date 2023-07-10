@@ -1,4 +1,4 @@
-import { nameLetterMap, luckyNumbersMap } from "./constants";
+import { nameLetterMap, luckyNumbersMap, zodiacMap } from "./constants";
 
 //? unused
 export function calculateAlphabetTotal(name) {
@@ -104,6 +104,54 @@ export function getLuckyNumbers(bn, dn) {
 
   // If no matching row is found, return an empty array
   return [];
+}
+
+// Helper function to get the month index from month abbreviation
+const getMonthIndex = (abbreviation) =>
+  [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ].indexOf(abbreviation);
+
+function isDateInRange(inputDate, startDate, endDate) {
+  // Convert inputDate to a Date object
+  const date = new Date(inputDate);
+
+  // Extract the day and month from the start and end dates
+  const startDay = parseInt(startDate.split("-")[0]);
+  const startMonth = getMonthIndex(startDate.split("-")[1]);
+  const endDay = parseInt(endDate.split("-")[0]);
+  const endMonth = getMonthIndex(endDate.split("-")[1]);
+
+  // Set the year of the inputDate to the current year
+  date.setFullYear(new Date().getFullYear());
+
+  // Set the start and end dates
+  const startDateObj = new Date(date.getFullYear(), startMonth, startDay);
+  const endDateObj = new Date(date.getFullYear(), endMonth, endDay);
+
+  // Check if the inputDate is within the range
+  return date >= startDateObj && date <= endDateObj;
+}
+
+export function getZodiacDetails(inputDate) {
+  if (!inputDate) {
+    return null;
+  }
+
+  return zodiacMap.find(({ startDate, endDate }) =>
+    isDateInRange(inputDate, startDate, endDate)
+  );
 }
 
 export const tableStyle = {
