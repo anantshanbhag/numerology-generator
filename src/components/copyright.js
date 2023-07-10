@@ -14,7 +14,7 @@ function Copyright() {
             padding: 0,
           }}
         >
-          &copy; {new Date().getFullYear()} Northstar. All rights reserved.
+          &copy; {new Date().getFullYear()} Divine Guide. All rights reserved.
         </p>
       </div>
     </footer>
